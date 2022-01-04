@@ -1,0 +1,11 @@
+version: "3"
+services:
+  db:
+    image: oscarfonts/h2
+    ports:
+      - 81:81
+      - 1521:1521
+    volumes:
+      - ./data/test:/opt/h2-data
+    environment:
+      - H2_OPTIONS=-ifNotExists
