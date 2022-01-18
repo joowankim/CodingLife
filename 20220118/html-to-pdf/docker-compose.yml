@@ -1,0 +1,9 @@
+version: "3"
+services:
+  converter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "./:/app"
+    command: ["python", "main.py", "html_example.html", "output.pdf"]
