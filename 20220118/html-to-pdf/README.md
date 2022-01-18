@@ -23,4 +23,13 @@
 [검색으로 알게된 블로그](https://thekkom.tistory.com/m/15)에 따르면 두 가지 방법이 있다.
 
 1. `apt-get`을 활용해 간편하게 폰트 설치하기
-2. 직접 `.ttf` 파일을 다운받아 폰트 설치하기
+2. 직접 `.ttf` 파일을 다운받아 폰트 설치하기 (해당 프로젝트는 2번을 사용했다.)
+
+## 실행하기
+
+1. Docker와 docker-compose를 설치한다.
+2. `docker-compose up`을 실행한다.
+   ```bash
+   $ docker-compose up
+   ```
+3. 실행하고 나면 프로젝트 내에 `output.pdf` 파일 생긴 것을 확인할 수 있다. 내용은 다음과 같다.
