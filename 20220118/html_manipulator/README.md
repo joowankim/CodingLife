@@ -1,5 +1,7 @@
 # BeautifulSoup4로 HTML 조작하기
 
+![python](https://img.shields.io/badge/python-3.9-blue)
+
 기존의 HTML 페이지를 python으로 조작하기 위한 방법 중 하나로 BeautifulSoup4 패키지를 이용해보았다.
 해당 미니 프로젝트는 BeautifulSoup4 패키지의 `BeautifulSoup` 객체 사용법의 일부를 다룬다. 
 
@@ -16,8 +18,6 @@
    - 새로운 태그 만들기: `new_tag()`
 
 ### 실행 방법
-
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 2. 프로젝트를 클론한다.
     
