@@ -1,5 +1,11 @@
 # HTML 파일을 PDF 파일로 변환하기 with `Docker`
 
+![python](https://img.shields.io/badge/python-3.9-blue)
+![docker](https://img.shields.io/badge/docker-20.10.12-blue)
+![docker-compose](https://img.shields.io/badge/docker--compose-3-blue)
+![wkhtmltopdf](https://img.shields.io/badge/wkhtmltopdf-0.12.6-blue)
+![pdfkit](https://img.shields.io/badge/pdfkit-1.0.0-blue)
+
 컨테이너 환경에서 실행할 수 있는 HTML to PDF 파일 변환 python 스크립트를 작성해보자.
 이를 위해서는 다음과 같은 환경이 필요하다.
 
