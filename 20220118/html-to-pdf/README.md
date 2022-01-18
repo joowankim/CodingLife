@@ -33,3 +33,5 @@
    $ docker-compose up
    ```
 3. 실행하고 나면 프로젝트 내에 `output.pdf` 파일 생긴 것을 확인할 수 있다. 내용은 다음과 같다.
+   ![image](https://user-images.githubusercontent.com/32446834/149945505-9c23b219-ad4a-4328-99ec-32054ac3e8e8.png)
+
