@@ -18,15 +18,15 @@
    - 새로운 태그 만들기: `new_tag()`
 
 ### 실행 방법
-
-1. 프로젝트를 클론한다.
-    
-    ```bash
-    $ git clone
-    ```
    
-2. 의존성 패키지를 설치한다.
+1. 의존성 패키지를 설치한다.
    
     ```bash
     $ pip install -r requirements.txt
+    ```
+
+2. `pytest`를 실행한다.
+
+    ```bash
+    $ pytest
     ```
