@@ -19,13 +19,13 @@
 
 ### 실행 방법
 
-2. 프로젝트를 클론한다.
+1. 프로젝트를 클론한다.
     
     ```bash
     $ git clone
     ```
    
-3. 의존성 패키지를 설치한다.
+2. 의존성 패키지를 설치한다.
    
     ```bash
     $ pip install -r requirements.txt
