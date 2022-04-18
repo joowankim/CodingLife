@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "localstack-getting-started"
+version = "0.1.0"
+description = ""
+authors = ["Joowan Kim <97571101+joowan217@users.noreply.github.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+localstack = "^0.14.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
