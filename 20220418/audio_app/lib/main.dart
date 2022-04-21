@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,26 +15,28 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const PlayerPage(title: 'Flutter Demo Audio Player Page'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class PlayerPage extends StatefulWidget {
+  const PlayerPage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<PlayerPage> createState() => _PlayerPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+class _PlayerPageState extends State<PlayerPage> {
+  final AudioPlayer _audioPlayer = AudioPlayer();
+  bool isPlaying = false;
+  String? soundSourceUrl;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  @override
+  void initState() {
+    super.initState();
+    soundSourceUrl = "https://cdn.pozalabs.com/recruit/musics/119.mp3";
   }
 
   @override
@@ -46,21 +49,39 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            IconButton(
+                icon: Icon(isPlaying ? Icons.pause : Icons.play_arrow),
+                onPressed: () {
+                  if (_audioPlayer.state == PlayerState.PLAYING) {
+                    _audioPlayer.pause();
+
+                    setState(() {
+                      isPlaying = false;
+                    });
+                  } else {
+                    if (_audioPlayer.state == PlayerState.PAUSED) {
+                      _audioPlayer.resume();
+                    } else if (_audioPlayer.state == PlayerState.STOPPED) {
+                      _audioPlayer.play(soundSourceUrl!);
+                    }
+
+                    setState(() {
+                      isPlaying = true;
+                    });
+                  }
+                }),
+            IconButton(
+                icon: const Icon(Icons.stop),
+                onPressed: () {
+                  _audioPlayer.stop();
+
+                  setState(() {
+                    isPlaying = false;
+                  });
+                })
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
